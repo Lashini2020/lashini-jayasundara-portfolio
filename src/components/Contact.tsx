@@ -1,5 +1,4 @@
-
-import { Mail, Phone, Linkedin, Github, Award, Send, MapPin } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, Send, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
@@ -79,7 +78,7 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Lashini Jayasundara",
-      href: "https://linkedin.com/in/lashini-jayasundara",
+      href: "https://www.linkedin.com/in/lashini-jayasundara-9a39142a6",
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -88,13 +87,6 @@ const Contact = () => {
       value: "Lashini2020",
       href: "https://github.com/Lashini2020",
       color: "from-gray-600 to-gray-800"
-    },
-    {
-      icon: Award,
-      label: "Credly",
-      value: "chamodya jayasundara",
-      href: "https://credly.com/users/chamodya-jayasundara",
-      color: "from-orange-500 to-red-500"
     },
     {
       icon: MapPin,
@@ -128,6 +120,8 @@ const Contact = () => {
                   <a
                     key={index}
                     href={item.href}
+                    target={item.href.startsWith('http') ? '_blank' : undefined}
+                    rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     className="flex items-center gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors duration-300 group"
                   >
                     <div className={`w-12 h-12 bg-gradient-to-r ${item.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
