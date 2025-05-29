@@ -1,5 +1,5 @@
 
-import { ArrowDown, Download, Mail } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -19,7 +19,7 @@ const Hero = () => {
               <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-2xl bg-gradient-to-br from-blue-400 to-purple-500 p-1">
                 <img
                   src="https://i.postimg.cc/MGxgBZGs/Whats-App-Image-2025-05-27-at-9-33-10-PM.jpg"
-                  alt="J.M. Lashini Chamodya Jayasundara"
+                  alt="Lashini Jayasundara"
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
@@ -34,16 +34,16 @@ const Hero = () => {
           <div className="space-y-6">
             <div className="animate-fade-in">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
-                J.M. Lashini Chamodya
+                Hi I'm
                 <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  Jayasundara
+                  Lashini Jayasundara
                 </span>
               </h1>
             </div>
 
             <div className="animate-fade-in animation-delay-500">
               <p className="text-xl md:text-2xl text-gray-600 font-medium">
-                Information Systems Undergraduate | Future IT Professional
+                Information Systems Undergraduate
               </p>
             </div>
 
@@ -72,11 +72,6 @@ const Hero = () => {
                 <Mail size={20} />
                 Get In Touch
               </a>
-
-              <button className="px-8 py-4 bg-white/80 backdrop-blur-md text-gray-700 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-white transition-all duration-300 flex items-center gap-2">
-                <Download size={20} />
-                Download CV
-              </button>
             </div>
 
             {/* Stats */}
