@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, Monitor, Smartphone, Database } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
   const featuredProject = {
@@ -18,30 +18,6 @@ const Projects = () => {
     status: "Academic Project",
     year: "2024"
   };
-
-  const additionalProjects = [
-    {
-      title: "Portfolio Website",
-      description: "Modern, responsive portfolio website showcasing my skills and projects",
-      tech: ["React", "Tailwind CSS", "TypeScript"],
-      icon: Monitor,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Data Analysis Dashboard",
-      description: "Interactive dashboard for visualizing business metrics and KPIs",
-      tech: ["Power BI", "SQL", "Data Analysis"],
-      icon: Database,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Mobile App Prototype",
-      description: "UI/UX design prototype for mobile application",
-      tech: ["Figma", "UI/UX Design", "Prototyping"],
-      icon: Smartphone,
-      color: "from-green-500 to-emerald-500"
-    }
-  ];
 
   return (
     <section id="projects" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -126,47 +102,6 @@ const Projects = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Additional Projects */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {additionalProjects.map((project, index) => (
-            <div key={index} className="group hover:scale-105 transition-all duration-300">
-              <div className="bg-white/80 backdrop-blur-md rounded-2xl p-8 shadow-xl border border-white/20 h-full hover:shadow-2xl transition-shadow duration-300">
-                <div className={`w-16 h-16 bg-gradient-to-r ${project.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <project.icon className="text-white" size={28} />
-                </div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{project.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{project.description}</p>
-                
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <button className={`w-full bg-gradient-to-r ${project.color} text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
-                  View Details
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* More Projects CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-6">Interested in seeing more of my work?</p>
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-            View All Projects
-          </button>
         </div>
       </div>
     </section>
